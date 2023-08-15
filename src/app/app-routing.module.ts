@@ -5,6 +5,10 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 
 const routes: Routes = [
   {
+    path: 'users/:id',
+    component: UserDetailsComponent,
+  },
+  {
     path: 'users',
     component: MainComponent,
   },
@@ -12,10 +16,6 @@ const routes: Routes = [
     path: '',
     redirectTo: 'users',
     pathMatch: 'full',
-  },
-  {
-    path: 'user/:id',
-    component: UserDetailsComponent,
   },
 ];
 

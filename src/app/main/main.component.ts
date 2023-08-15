@@ -21,16 +21,12 @@ export class MainComponent implements OnInit {
       .get<any[]>('https://jsonplaceholder.typicode.com/users')
       .subscribe((data) => {
         this.users = data.map((user) => {
-          return {
-            id: user.id,
-            username: user.username,
-            email: user.email,
-          };
+          return user;
         });
       });
   }
 
   onRowButtonClick(user: any) {
-    this.router.navigate(['/user', user.id]);
+    this.router.navigate(['/users', user.id]);
   }
 }

@@ -1,1 +1,18 @@
-<p>user-details works!</p>
+<div class="user-details">
+  <h2>User Details</h2>
+  <div *ngIf="user">
+    <h3>{{ user.name }}</h3>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Phone:</strong> {{ user.phone }}</p>
+    <p><strong>Website:</strong> {{ user.website }}</p>
+    <h4>Address:</h4>
+    <p>{{ user.address.street }}, {{ user.address.suite }}</p>
+    <p>{{ user.address.city }}, {{ user.address.zipcode }}</p>
+    <h4>Company:</h4>
+    <p><strong>Name:</strong> {{ user.company.name }}</p>
+    <p><strong>Catch Phrase:</strong> {{ user.company.catchPhrase }}</p>
+    <p><strong>Business Services:</strong> {{ user.company.bs }}</p>
+  </div>
+  <button routerLink="/users">Back to Users</button>
+</div>
