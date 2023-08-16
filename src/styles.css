@@ -1,16 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-
-html,
 body {
-  height: 100%;
+  margin: 4rem auto;
+  text-align: center;
+  width: 80%;
+  background-color: #03001c;
+  color: antiquewhite;
 }
 
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* align-items: center; */
-  /* width: 80%; */
+@media (min-width: 1024px) {
+  body {
+    width: 50%;
+  }
 }

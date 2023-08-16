@@ -1,17 +1,20 @@
-<h2>User Details</h2>
+<h1>User Details</h1>
+<div class="underline"></div>
 <div *ngIf="user">
   <h3>{{ user.name }}</h3>
   <p><strong>Username:</strong> {{ user.username }}</p>
   <p><strong>Email:</strong> {{ user.email }}</p>
   <p><strong>Phone:</strong> {{ user.phone }}</p>
   <p><strong>Website:</strong> {{ user.website }}</p>
-  <h4>Address:</h4>
+  <p><strong>Address:</strong></p>
   <p>{{ user.address.street }}, {{ user.address.suite }}</p>
   <p>{{ user.address.city }}, {{ user.address.zipcode }}</p>
-  <h4>Company:</h4>
-  <p><strong>Name:</strong> {{ user.company.name }}</p>
-  <p><strong>Catch Phrase:</strong> {{ user.company.catchPhrase }}</p>
-  <p><strong>Business Services:</strong> {{ user.company.bs }}</p>
+  <p><strong>Company:</strong></p>
+  <p><span class="company">Name:</span> {{ user.company.name }}</p>
+  <p>
+    <span class="company">Catch Phrase:</span> {{ user.company.catchPhrase }}
+  </p>
+  <p><span class="company">Business Services:</span> {{ user.company.bs }}</p>
 </div>
 <button routerLink="/users">Back to Users</button>
-<button routerLink="/users/{{ userId }}/posts">Posts</button>
+<button routerLink="/users/{{ userId }}/posts">User Posts</button>

@@ -1,38 +1,76 @@
-/* Apply custom styles to mat-card */
 .post-card {
-  margin: 10px;
-  padding: 20px;
+  margin: 1rem;
+  padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(230, 224, 224, 0.1);
   transition: transform 0.2s ease-in-out;
-  flex-basis: calc(25% - 20px); /* 4 cards per row */
+  max-width: 400px;
 
-  /* Hover effect */
   &:hover {
     transform: scale(1.03);
   }
 }
 
-/* Responsive card layout */
-@media (max-width: 1024px) {
-  .post-card {
-    flex-basis: calc(100% - 20px); /* 1 card per row */
+div {
+  color: black;
+}
+div h2 {
+  color: wheat;
+}
+
+.card-div {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Responsive grid columns */
+  gap: 20px; /* Gap between grid items */
+}
+
+@media (max-width: 775px) {
+  .card-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-/* Apply styles to card header */
-.mat-card-header {
+.mat-mdc-card-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  color: #5b8fb9;
 }
 
-/* Style card title and subtitle */
-.mat-card-title,
-.mat-card-subtitle {
-  font-size: 1.2rem;
+.mat-mdc-card-title {
+  margin-bottom: 10px;
+  margin-top: 1rem;
 }
 
-/* Style card content */
-.mat-card-content {
-  margin-top: 15px;
+.mat-mdc-card-content {
+  color: gray;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #5b8fb9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+  margin-right: 1rem;
+  margin-top: 2rem;
+}
+
+button:hover {
+  background-color: #406e8e;
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .card-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }

@@ -25,18 +25,17 @@ export class HeaderComponent implements OnInit {
     const currentRoute = this.router.url;
     if (currentRoute === '/users') {
       this.pageTitle = 'Main Page';
-      this.pageDescription = 'Lorem ipsum dolor sit amet.';
+      this.pageDescription = `This webpage serves as a comprehensive hub, <span>aggregating and showcasing</span> profiles of all registered users within our network.`;
     } else if (
       currentRoute.startsWith('/users/') &&
       currentRoute.endsWith('/posts')
     ) {
-      // Route like /users/:id/posts
       this.pageTitle = "User's Posts";
-      this.pageDescription = 'Posts of the selected user.';
+      this.pageDescription =
+        'This dedicated web page provides you with the platform to <span>seamlessly explore and delve into the collective posts of every user</span>, offering a comprehensive glimpse into the diverse array of content shared by each individual across our network.';
     } else if (currentRoute.startsWith('/users/')) {
-      // Other user-related routes
       this.pageTitle = 'User Details Page';
-      this.pageDescription = 'Details about the selected user.';
+      this.pageDescription = `Within this webpage, you're presented with the opportunity to <span>gain intricate insights into each user</span>, as it serves as a hub teeming with comprehensive details encompassing every facet of their presence and engagement within our network`;
     } else {
       this.pageTitle = 'Default Title';
       this.pageDescription = 'Default Description';
